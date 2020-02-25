@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE541AFF2404F7D300251A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541AFE2404F7D300251A10 /* AppDelegate.swift */; };
+		EE541B012404F7D300251A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B002404F7D300251A10 /* SceneDelegate.swift */; };
+		EE541B032404F7D300251A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B022404F7D300251A10 /* ViewController.swift */; };
+		EE541B062404F7D300251A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE541B042404F7D300251A10 /* Main.storyboard */; };
+		EE541B082404F7D400251A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE541B072404F7D400251A10 /* Assets.xcassets */; };
+		EE541B0B2404F7D400251A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE541B092404F7D400251A10 /* LaunchScreen.storyboard */; };
+		EE541B162404F7D400251A10 /* WorkmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B152404F7D400251A10 /* WorkmateTests.swift */; };
+		EE541B212404F7D400251A10 /* WorkmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B202404F7D400251A10 /* WorkmateUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE541B122404F7D400251A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE541AF32404F7D300251A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE541AFA2404F7D300251A10;
+			remoteInfo = Workmate;
+		};
+		EE541B1D2404F7D400251A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE541AF32404F7D300251A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE541AFA2404F7D300251A10;
+			remoteInfo = Workmate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE541AFB2404F7D300251A10 /* Workmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE541AFE2404F7D300251A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE541B002404F7D300251A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE541B022404F7D300251A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE541B052404F7D300251A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE541B072404F7D400251A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE541B0A2404F7D400251A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE541B0C2404F7D400251A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE541B112404F7D400251A10 /* WorkmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE541B152404F7D400251A10 /* WorkmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateTests.swift; sourceTree = "<group>"; };
+		EE541B172404F7D400251A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE541B1C2404F7D400251A10 /* WorkmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE541B202404F7D400251A10 /* WorkmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateUITests.swift; sourceTree = "<group>"; };
+		EE541B222404F7D400251A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE541AF82404F7D300251A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B0E2404F7D400251A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B192404F7D400251A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE541AF22404F7D300251A10 = {
+			isa = PBXGroup;
+			children = (
+				EE541AFD2404F7D300251A10 /* Workmate */,
+				EE541B142404F7D400251A10 /* WorkmateTests */,
+				EE541B1F2404F7D400251A10 /* WorkmateUITests */,
+				EE541AFC2404F7D300251A10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE541AFC2404F7D300251A10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE541AFB2404F7D300251A10 /* Workmate.app */,
+				EE541B112404F7D400251A10 /* WorkmateTests.xctest */,
+				EE541B1C2404F7D400251A10 /* WorkmateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE541AFD2404F7D300251A10 /* Workmate */ = {
+			isa = PBXGroup;
+			children = (
+				EEF0BEDE2405041A000662F7 /* Model */,
+				EEF0BEDF24050428000662F7 /* View */,
+				EEF0BEE024050430000662F7 /* ViewModel */,
+				EEF0BEE124050449000662F7 /* Resources */,
+				EE541B0C2404F7D400251A10 /* Info.plist */,
+			);
+			path = Workmate;
+			sourceTree = "<group>";
+		};
+		EE541B142404F7D400251A10 /* WorkmateTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE541B152404F7D400251A10 /* WorkmateTests.swift */,
+				EE541B172404F7D400251A10 /* Info.plist */,
+			);
+			path = WorkmateTests;
+			sourceTree = "<group>";
+		};
+		EE541B1F2404F7D400251A10 /* WorkmateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE541B202404F7D400251A10 /* WorkmateUITests.swift */,
+				EE541B222404F7D400251A10 /* Info.plist */,
+			);
+			path = WorkmateUITests;
+			sourceTree = "<group>";
+		};
+		EEF0BEDE2405041A000662F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEF0BEDF24050428000662F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE541B022404F7D300251A10 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEF0BEE024050430000662F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EEF0BEE124050449000662F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE541AFE2404F7D300251A10 /* AppDelegate.swift */,
+				EE541B002404F7D300251A10 /* SceneDelegate.swift */,
+				EE541B042404F7D300251A10 /* Main.storyboard */,
+				EE541B072404F7D400251A10 /* Assets.xcassets */,
+				EE541B092404F7D400251A10 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE541AFA2404F7D300251A10 /* Workmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE541B252404F7D400251A10 /* Build configuration list for PBXNativeTarget "Workmate" */;
+			buildPhases = (
+				EE541AF72404F7D300251A10 /* Sources */,
+				EE541AF82404F7D300251A10 /* Frameworks */,
+				EE541AF92404F7D300251A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Workmate;
+			productName = Workmate;
+			productReference = EE541AFB2404F7D300251A10 /* Workmate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE541B102404F7D400251A10 /* WorkmateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE541B282404F7D400251A10 /* Build configuration list for PBXNativeTarget "WorkmateTests" */;
+			buildPhases = (
+				EE541B0D2404F7D400251A10 /* Sources */,
+				EE541B0E2404F7D400251A10 /* Frameworks */,
+				EE541B0F2404F7D400251A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE541B132404F7D400251A10 /* PBXTargetDependency */,
+			);
+			name = WorkmateTests;
+			productName = WorkmateTests;
+			productReference = EE541B112404F7D400251A10 /* WorkmateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE541B1B2404F7D400251A10 /* WorkmateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE541B2B2404F7D400251A10 /* Build configuration list for PBXNativeTarget "WorkmateUITests" */;
+			buildPhases = (
+				EE541B182404F7D400251A10 /* Sources */,
+				EE541B192404F7D400251A10 /* Frameworks */,
+				EE541B1A2404F7D400251A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE541B1E2404F7D400251A10 /* PBXTargetDependency */,
+			);
+			name = WorkmateUITests;
+			productName = WorkmateUITests;
+			productReference = EE541B1C2404F7D400251A10 /* WorkmateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE541AF32404F7D300251A10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = gsiva;
+				TargetAttributes = {
+					EE541AFA2404F7D300251A10 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					EE541B102404F7D400251A10 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EE541AFA2404F7D300251A10;
+					};
+					EE541B1B2404F7D400251A10 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EE541AFA2404F7D300251A10;
+					};
+				};
+			};
+			buildConfigurationList = EE541AF62404F7D300251A10 /* Build configuration list for PBXProject "Workmate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE541AF22404F7D300251A10;
+			productRefGroup = EE541AFC2404F7D300251A10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE541AFA2404F7D300251A10 /* Workmate */,
+				EE541B102404F7D400251A10 /* WorkmateTests */,
+				EE541B1B2404F7D400251A10 /* WorkmateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE541AF92404F7D300251A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE541B0B2404F7D400251A10 /* LaunchScreen.storyboard in Resources */,
+				EE541B082404F7D400251A10 /* Assets.xcassets in Resources */,
+				EE541B062404F7D300251A10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B0F2404F7D400251A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B1A2404F7D400251A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE541AF72404F7D300251A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE541B032404F7D300251A10 /* ViewController.swift in Sources */,
+				EE541AFF2404F7D300251A10 /* AppDelegate.swift in Sources */,
+				EE541B012404F7D300251A10 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B0D2404F7D400251A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE541B162404F7D400251A10 /* WorkmateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE541B182404F7D400251A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE541B212404F7D400251A10 /* WorkmateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE541B132404F7D400251A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE541AFA2404F7D300251A10 /* Workmate */;
+			targetProxy = EE541B122404F7D400251A10 /* PBXContainerItemProxy */;
+		};
+		EE541B1E2404F7D400251A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE541AFA2404F7D300251A10 /* Workmate */;
+			targetProxy = EE541B1D2404F7D400251A10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE541B042404F7D300251A10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE541B052404F7D300251A10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE541B092404F7D400251A10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE541B0A2404F7D400251A10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE541B232404F7D400251A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE541B242404F7D400251A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE541B262404F7D400251A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = Workmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.Workmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE541B272404F7D400251A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = Workmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.Workmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE541B292404F7D400251A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = WorkmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.WorkmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Workmate.app/Workmate";
+			};
+			name = Debug;
+		};
+		EE541B2A2404F7D400251A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = WorkmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.WorkmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Workmate.app/Workmate";
+			};
+			name = Release;
+		};
+		EE541B2C2404F7D400251A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = WorkmateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.WorkmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Workmate;
+			};
+			name = Debug;
+		};
+		EE541B2D2404F7D400251A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHB3235S59;
+				INFOPLIST_FILE = WorkmateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gsiva.WorkmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Workmate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE541AF62404F7D300251A10 /* Build configuration list for PBXProject "Workmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE541B232404F7D400251A10 /* Debug */,
+				EE541B242404F7D400251A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE541B252404F7D400251A10 /* Build configuration list for PBXNativeTarget "Workmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE541B262404F7D400251A10 /* Debug */,
+				EE541B272404F7D400251A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE541B282404F7D400251A10 /* Build configuration list for PBXNativeTarget "WorkmateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE541B292404F7D400251A10 /* Debug */,
+				EE541B2A2404F7D400251A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE541B2B2404F7D400251A10 /* Build configuration list for PBXNativeTarget "WorkmateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE541B2C2404F7D400251A10 /* Debug */,
+				EE541B2D2404F7D400251A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE541AF32404F7D300251A10 /* Project object */;
+}
