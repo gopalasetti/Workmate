@@ -16,6 +16,8 @@
 		EE541B162404F7D400251A10 /* WorkmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B152404F7D400251A10 /* WorkmateTests.swift */; };
 		EE541B212404F7D400251A10 /* WorkmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B202404F7D400251A10 /* WorkmateUITests.swift */; };
 		EEF0BEE324051EBC000662F7 /* ClockInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */; };
+		EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE424052232000662F7 /* Timesheet.swift */; };
+		EEF0BEE724052232000662F7 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE524052232000662F7 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		EE541B202404F7D400251A10 /* WorkmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateUITests.swift; sourceTree = "<group>"; };
 		EE541B222404F7D400251A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutButton.swift; sourceTree = "<group>"; };
+		EEF0BEE424052232000662F7 /* Timesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timesheet.swift; sourceTree = "<group>"; };
+		EEF0BEE524052232000662F7 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		EEF0BEDE2405041A000662F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEF0BEE524052232000662F7 /* Job.swift */,
+				EEF0BEE424052232000662F7 /* Timesheet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,8 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF0BEE324051EBC000662F7 /* ClockInOutButton.swift in Sources */,
+				EEF0BEE724052232000662F7 /* Job.swift in Sources */,
 				EE541B032404F7D300251A10 /* ViewController.swift in Sources */,
 				EE541AFF2404F7D300251A10 /* AppDelegate.swift in Sources */,
+				EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */,
 				EE541B012404F7D300251A10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
