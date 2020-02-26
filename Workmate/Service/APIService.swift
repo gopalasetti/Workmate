@@ -35,6 +35,8 @@ class APIService {
                 completion(.failure(.invalidResponse))
             }
             do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                print(jsonObject)
                 let values = try self.jsonDecoder.decode(T.self, from: data!)
                 completion(.success(values))
             } catch {
@@ -94,7 +96,7 @@ class APIService {
             request.httpMethod = "POST"
             request.httpBody = data
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue(apiKey, forHTTPHeaderField: "Authorization")
+            request.setValue("token \(apiKey)", forHTTPHeaderField: "Authorization")
             fetchResources(request: request, completion: result)
         }
         catch {
@@ -117,7 +119,7 @@ class APIService {
             request.httpMethod = "POST"
             request.httpBody = data
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue(apiKey, forHTTPHeaderField: "Authorization")
+            request.setValue("token \(apiKey)", forHTTPHeaderField: "Authorization")
             fetchResources(request: request, completion: result)
         }
         catch {

@@ -19,6 +19,11 @@ struct Constants {
         case clockOut = "staff-requests/26074/clock-out/"
     }
 
+    enum TimeSheetState {
+        case clockIn
+        case clockOut
+    }
+
 }
 
 

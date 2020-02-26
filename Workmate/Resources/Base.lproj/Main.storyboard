@@ -189,6 +189,57 @@
                                 <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SZ-fD-RCO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clocking In…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-NM-xEO">
+                                        <rect key="frame" x="159" y="390" width="96" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="1Va-T3-7Qw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressImage="progress" trackImage="Fill" translatesAutoresizingMaskIntoConstraints="NO" id="Cli-nR-ktd">
+                                        <rect key="frame" x="60" y="438" width="294" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="BrC-N0-I8y"/>
+                                        </constraints>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-bk-TNd">
+                                        <rect key="frame" x="182" y="482" width="50" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Z3t-Va-u4I"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Cancel">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Rc-Fr-xE2"/>
+                                            <action selector="cancelButtonAction:" destination="RUw-nG-N7p" eventType="touchUpInside" id="XOq-Y9-ZXV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Cli-nR-ktd" firstAttribute="centerY" secondItem="5SZ-fD-RCO" secondAttribute="centerY" id="4Pb-SE-myD"/>
+                                    <constraint firstItem="Cli-nR-ktd" firstAttribute="top" secondItem="Ka6-NM-xEO" secondAttribute="bottom" constant="24" id="9qa-er-Uvg"/>
+                                    <constraint firstItem="OeJ-bk-TNd" firstAttribute="top" secondItem="Cli-nR-ktd" secondAttribute="bottom" constant="24" id="IBl-db-9Wm"/>
+                                    <constraint firstItem="Ka6-NM-xEO" firstAttribute="centerX" secondItem="5SZ-fD-RCO" secondAttribute="centerX" id="NtB-E2-XbY"/>
+                                    <constraint firstItem="OeJ-bk-TNd" firstAttribute="centerX" secondItem="5SZ-fD-RCO" secondAttribute="centerX" id="f3q-3i-MBf"/>
+                                    <constraint firstItem="Cli-nR-ktd" firstAttribute="leading" secondItem="5SZ-fD-RCO" secondAttribute="leading" constant="60" id="nNI-G7-1I4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cli-nR-ktd" secondAttribute="trailing" constant="60" id="smG-li-uWM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -203,18 +254,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lP9-fM-6cK" secondAttribute="trailing" constant="28" id="HTE-NP-GPP"/>
                             <constraint firstItem="9A5-8W-9Vf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="I3s-L6-X6H"/>
                             <constraint firstItem="RA0-5h-sIy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="IK7-GX-E4D"/>
+                            <constraint firstItem="5SZ-fD-RCO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J0u-3n-H81"/>
                             <constraint firstItem="Ev8-wF-UYE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JU2-pV-Ypj"/>
                             <constraint firstItem="UuM-qL-AiI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MX1-V6-7rW"/>
                             <constraint firstItem="48a-yT-QQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="Nt1-Ca-CJ6"/>
                             <constraint firstItem="wrW-9g-iWP" firstAttribute="top" secondItem="RA0-5h-sIy" secondAttribute="bottom" constant="25" id="OqX-9h-yox"/>
                             <constraint firstItem="48a-yT-QQM" firstAttribute="top" secondItem="3hb-gy-STU" secondAttribute="bottom" constant="10" id="RAj-il-XJe"/>
+                            <constraint firstItem="5SZ-fD-RCO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UVp-oU-fm4"/>
                             <constraint firstItem="JdA-Cy-jEG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Y42-Kg-VVv"/>
+                            <constraint firstAttribute="bottom" secondItem="5SZ-fD-RCO" secondAttribute="bottom" id="YwK-oA-j7X"/>
                             <constraint firstItem="JMi-6V-aq9" firstAttribute="leading" secondItem="48a-yT-QQM" secondAttribute="trailing" constant="13" id="ZUG-af-3CO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wrW-9g-iWP" secondAttribute="trailing" constant="28" id="bjR-oJ-HN0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9A5-8W-9Vf" secondAttribute="trailing" constant="28" id="eir-OS-QRV"/>
                             <constraint firstItem="lP9-fM-6cK" firstAttribute="top" secondItem="9A5-8W-9Vf" secondAttribute="bottom" constant="-3" id="f42-tv-Hw9"/>
                             <constraint firstItem="3hb-gy-STU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="fPk-RF-BCk"/>
                             <constraint firstItem="wrW-9g-iWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="giK-jT-Kj0"/>
+                            <constraint firstItem="5SZ-fD-RCO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wjE-lQ-PhK"/>
                             <constraint firstItem="lP9-fM-6cK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3hb-gy-STU" secondAttribute="trailing" constant="8" symbolic="YES" id="zmb-s4-fSl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMi-6V-aq9" secondAttribute="trailing" constant="28" id="zz0-dS-jZM"/>
                         </constraints>
@@ -230,18 +285,23 @@
                         <outlet property="managerNameLabel" destination="Jvm-fB-e4Y" id="lpF-Lg-nZX"/>
                         <outlet property="managerNumberLabel" destination="9Eu-29-a6f" id="YRv-CI-FgP"/>
                         <outlet property="positionLabbel" destination="JdA-Cy-jEG" id="8cp-5A-zbh"/>
+                        <outlet property="progressView" destination="5SZ-fD-RCO" id="QJC-31-Hhw"/>
+                        <outlet property="progressViewBar" destination="Cli-nR-ktd" id="JUb-kC-5gX"/>
                         <outlet property="wageAmountLabel" destination="9A5-8W-9Vf" id="sBK-VP-lyk"/>
                         <outlet property="wageTypeLabel" destination="lP9-fM-6cK" id="cv5-Nd-W7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="RUw-nG-N7p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Fill" width="260" height="20"/>
         <image name="call" width="12" height="12"/>
         <image name="contact" width="8.5" height="11.5"/>
         <image name="location" width="10" height="13.5"/>
+        <image name="progress" width="112" height="20"/>
     </resources>
 </document>

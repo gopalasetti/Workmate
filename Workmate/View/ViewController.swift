@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -26,8 +27,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var clockInOutButton: ClockInOutButton!
+        
+    @IBOutlet weak var progressViewBar: UIProgressView!
+    
+    @IBOutlet weak var progressView: UIView!
+        
+    var timeSheetStateValue = Constants.TimeSheetState.clockIn
     
     var jobViewModel = JobViewModel()
+    
+    var timesheetViewModel = TimesheetViewModel()
+
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +46,7 @@ class ViewController: UIViewController {
         getJobInfoAndUpdateUI()
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func clockInOutButtonAction(_ sender: Any) {
         
-    }
-    
     func getJobInfoAndUpdateUI() {
         jobViewModel.getJobInfo { [weak self] result in
             guard let self = self else {return}
@@ -69,6 +76,13 @@ class ViewController: UIViewController {
         addressLabel.text = jobViewModel.address
         managerNameLabel.text = jobViewModel.managerName
         managerNumberLabel.attributedText = jobViewModel.contactNumber
+        let defaults = UserDefaults.standard
+        if let clockInTime = defaults.value(forKey: "clockInTime") {
+            self.clockInLabel.text = clockInTime as? String ?? ""
+            self.timeSheetStateValue = Constants.TimeSheetState.clockOut
+            self.timesheetViewModel.timeSheetStateValue = Constants.TimeSheetState.clockOut
+            self.clockInOutButton.setTitle("Clock Out", for: .normal)
+        }
     }
     
     func showAlert(title: String, message: String, viewController: UIViewController) {
@@ -77,6 +91,77 @@ class ViewController: UIViewController {
         alert.addAction(okButton)
         viewController.present(alert, animated: true, completion: nil)
     }
-    
-}
+        
+    @IBAction func clockInOutButtonAction(_ sender: Any) {
+        progressView.isHidden = false
+        var progress: Float = 0
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
+            progress += 0.05
+            self.progressViewBar.setProgress(progress, animated: true)
+            if progress > 1 {
+                timer.invalidate()
+                self.progressViewBar.setProgress(0, animated: true)
+                self.progressView.isHidden = true
+                self.updateTimeSheet()
+            }
+        }
+    }
 
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        timer?.invalidate()
+        progressView.isHidden = true
+        progressViewBar.setProgress(0, animated: true)
+    }
+        
+    func updateTimeSheet() {
+        self.activityIndicator.startAnimating()
+        if timeSheetStateValue == Constants.TimeSheetState.clockIn {
+            timesheetViewModel.getClockInInfo { [weak self] result in
+                guard let self = self else {return}
+                
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                }
+                
+                switch result {
+                case .success( _):
+                    DispatchQueue.main.async {
+                        self.clockInLabel.text = self.timesheetViewModel.clockInTime
+                        self.timeSheetStateValue = Constants.TimeSheetState.clockOut
+                        self.timesheetViewModel.timeSheetStateValue = self.timeSheetStateValue
+                        self.clockInOutButton.setTitle("Clock Out", for: .normal)
+                        let defaults = UserDefaults.standard
+                        defaults.set(self.timesheetViewModel.clockInTime, forKey: "clockInTime")
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Failed", message: "\(error)", viewController: self)
+                    }
+                }
+                
+            }
+        } else {
+            timesheetViewModel.getClockOutInfo { [weak self] result in
+                guard let self = self else {return}
+                
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                }
+                
+                switch result {
+                case .success( _):
+                    DispatchQueue.main.async {
+                        self.clockOutLabel.text = self.timesheetViewModel.clockOutTime
+                        self.clockInOutButton.isHidden = true
+                        let defaults = UserDefaults.standard
+                        defaults.set(nil, forKey: "clockInTime")
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Failed", message: "\(error)", viewController: self)
+                    }
+                }
+            }
+        }
+    }
+}

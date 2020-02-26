@@ -18,6 +18,7 @@
 		EE7B17DC2405401E00F6FE48 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DB2405401E00F6FE48 /* APIService.swift */; };
 		EE7B17DE2405404600F6FE48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DD2405404600F6FE48 /* Constants.swift */; };
 		EE7B17E0240540DE00F6FE48 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */; };
+		EE7B17E624055DAE00F6FE48 /* TimesheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */; };
 		EEF0BEE324051EBC000662F7 /* ClockInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */; };
 		EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE424052232000662F7 /* Timesheet.swift */; };
 		EEF0BEE724052232000662F7 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE524052232000662F7 /* Job.swift */; };
@@ -58,6 +59,7 @@
 		EE7B17DB2405401E00F6FE48 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EE7B17DD2405404600F6FE48 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetViewModel.swift; sourceTree = "<group>"; };
 		EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutButton.swift; sourceTree = "<group>"; };
 		EEF0BEE424052232000662F7 /* Timesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timesheet.swift; sourceTree = "<group>"; };
 		EEF0BEE524052232000662F7 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */,
+				EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				EE7B17E0240540DE00F6FE48 /* JobViewModel.swift in Sources */,
 				EEF0BEE724052232000662F7 /* Job.swift in Sources */,
 				EE541B032404F7D300251A10 /* ViewController.swift in Sources */,
+				EE7B17E624055DAE00F6FE48 /* TimesheetViewModel.swift in Sources */,
 				EE541AFF2404F7D300251A10 /* AppDelegate.swift in Sources */,
 				EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */,
 				EE541B012404F7D300251A10 /* SceneDelegate.swift in Sources */,

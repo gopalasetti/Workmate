@@ -9,7 +9,16 @@
 import Foundation
 
 struct ClockInTimeSheet: Decodable {
-    let clockInTime: Date
+    let clockInTime: String
+    
+    enum CodingKeys: String, CodingKey {
+        case clockInTime = "clockInTime"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        clockInTime = try container.decode(String.self, forKey: .clockInTime)
+    }
 }
 
 struct ClockOutTimeSheet: Decodable {
