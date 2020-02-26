@@ -15,6 +15,13 @@
 		EE541B0B2404F7D400251A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE541B092404F7D400251A10 /* LaunchScreen.storyboard */; };
 		EE541B162404F7D400251A10 /* WorkmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B152404F7D400251A10 /* WorkmateTests.swift */; };
 		EE541B212404F7D400251A10 /* WorkmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE541B202404F7D400251A10 /* WorkmateUITests.swift */; };
+		EE7B17DC2405401E00F6FE48 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DB2405401E00F6FE48 /* APIService.swift */; };
+		EE7B17DE2405404600F6FE48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DD2405404600F6FE48 /* Constants.swift */; };
+		EE7B17E0240540DE00F6FE48 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */; };
+		EE7B17E624055DAE00F6FE48 /* TimesheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */; };
+		EEF0BEE324051EBC000662F7 /* ClockInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */; };
+		EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE424052232000662F7 /* Timesheet.swift */; };
+		EEF0BEE724052232000662F7 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF0BEE524052232000662F7 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		EE541B1C2404F7D400251A10 /* WorkmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE541B202404F7D400251A10 /* WorkmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateUITests.swift; sourceTree = "<group>"; };
 		EE541B222404F7D400251A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7B17DB2405401E00F6FE48 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EE7B17DD2405404600F6FE48 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetViewModel.swift; sourceTree = "<group>"; };
+		EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutButton.swift; sourceTree = "<group>"; };
+		EEF0BEE424052232000662F7 /* Timesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timesheet.swift; sourceTree = "<group>"; };
+		EEF0BEE524052232000662F7 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 				EEF0BEDE2405041A000662F7 /* Model */,
 				EEF0BEDF24050428000662F7 /* View */,
 				EEF0BEE024050430000662F7 /* ViewModel */,
+				EE7B17DA2405400700F6FE48 /* Service */,
 				EEF0BEE124050449000662F7 /* Resources */,
 				EE541B0C2404F7D400251A10 /* Info.plist */,
 			);
@@ -126,9 +141,19 @@
 			path = WorkmateUITests;
 			sourceTree = "<group>";
 		};
+		EE7B17DA2405400700F6FE48 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EE7B17DB2405401E00F6FE48 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		EEF0BEDE2405041A000662F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEF0BEE524052232000662F7 /* Job.swift */,
+				EEF0BEE424052232000662F7 /* Timesheet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				EE541B022404F7D300251A10 /* ViewController.swift */,
+				EEF0BEE224051EBC000662F7 /* ClockInOutButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +170,8 @@
 		EEF0BEE024050430000662F7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EE7B17DF240540DE00F6FE48 /* JobViewModel.swift */,
+				EE7B17E524055DAE00F6FE48 /* TimesheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -151,6 +179,7 @@
 		EEF0BEE124050449000662F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE7B17DD2405404600F6FE48 /* Constants.swift */,
 				EE541AFE2404F7D300251A10 /* AppDelegate.swift */,
 				EE541B002404F7D300251A10 /* SceneDelegate.swift */,
 				EE541B042404F7D300251A10 /* Main.storyboard */,
@@ -291,9 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF0BEE324051EBC000662F7 /* ClockInOutButton.swift in Sources */,
+				EE7B17DC2405401E00F6FE48 /* APIService.swift in Sources */,
+				EE7B17E0240540DE00F6FE48 /* JobViewModel.swift in Sources */,
+				EEF0BEE724052232000662F7 /* Job.swift in Sources */,
 				EE541B032404F7D300251A10 /* ViewController.swift in Sources */,
+				EE7B17E624055DAE00F6FE48 /* TimesheetViewModel.swift in Sources */,
 				EE541AFF2404F7D300251A10 /* AppDelegate.swift in Sources */,
+				EEF0BEE624052232000662F7 /* Timesheet.swift in Sources */,
 				EE541B012404F7D300251A10 /* SceneDelegate.swift in Sources */,
+				EE7B17DE2405404600F6FE48 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
