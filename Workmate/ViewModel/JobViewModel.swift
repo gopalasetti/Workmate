@@ -56,6 +56,8 @@ class JobViewModel: ObservableObject {
     
     init() {}
     
+    /// Get the job details
+    /// - Parameter completion: return with Job object
     func getJobInfo(completion: @escaping Handler<Job>) {
         APIService.shared.login { [weak self] (result) in
             switch result {

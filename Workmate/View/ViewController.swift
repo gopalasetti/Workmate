@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIView!
         
+    @IBOutlet weak var clockInProgessLabel: UILabel!
+    
     var timeSheetStateValue = Constants.TimeSheetState.clockIn
     
     var jobViewModel = JobViewModel()
@@ -46,7 +48,8 @@ class ViewController: UIViewController {
         getJobInfoAndUpdateUI()
         // Do any additional setup after loading the view.
     }
-        
+    
+    /// Get the job data from the api and update UI
     func getJobInfoAndUpdateUI() {
         jobViewModel.getJobInfo { [weak self] result in
             guard let self = self else {return}
@@ -62,12 +65,13 @@ class ViewController: UIViewController {
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.showAlert(title: "Failed", message: "\(error)", viewController: self)
+                    self.showAlert(title: "Failed", message: "\(error)")
                 }
             }
         }
     }
     
+    /// Update the UI
     func updateUI() {
         positionLabbel.text = jobViewModel.positionName
         wageAmountLabel.text = jobViewModel.wageAmount
@@ -85,14 +89,25 @@ class ViewController: UIViewController {
         }
     }
     
-    func showAlert(title: String, message: String, viewController: UIViewController) {
+    /// Show alert
+    /// - Parameters:
+    ///   - title: alert title
+    ///   - message: alert message
+    func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(okButton)
-        viewController.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
         
     @IBAction func clockInOutButtonAction(_ sender: Any) {
+        if timeSheetStateValue == Constants.TimeSheetState.clockIn {
+            clockInProgessLabel.text = "Clocking In..."
+        }
+        else {
+            clockInProgessLabel.text = "Clocking Out..."
+        }
+
         progressView.isHidden = false
         var progress: Float = 0
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
@@ -112,7 +127,8 @@ class ViewController: UIViewController {
         progressView.isHidden = true
         progressViewBar.setProgress(0, animated: true)
     }
-        
+    
+    /// Update Timesheet based on the clock in/out
     func updateTimeSheet() {
         self.activityIndicator.startAnimating()
         if timeSheetStateValue == Constants.TimeSheetState.clockIn {
@@ -135,10 +151,9 @@ class ViewController: UIViewController {
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        self.showAlert(title: "Failed", message: "\(error)", viewController: self)
+                        self.showAlert(title: "Failed", message: "\(error)")
                     }
                 }
-                
             }
         } else {
             timesheetViewModel.getClockOutInfo { [weak self] result in
@@ -158,7 +173,7 @@ class ViewController: UIViewController {
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        self.showAlert(title: "Failed", message: "\(error)", viewController: self)
+                        self.showAlert(title: "Failed", message: "\(error)")
                     }
                 }
             }

@@ -281,6 +281,7 @@
                         <outlet property="clientLabel" destination="3hb-gy-STU" id="CCP-sy-ws2"/>
                         <outlet property="clockInLabel" destination="vu0-Kc-iBr" id="gcN-Un-baa"/>
                         <outlet property="clockInOutButton" destination="UuM-qL-AiI" id="9cX-zB-r5v"/>
+                        <outlet property="clockInProgessLabel" destination="Ka6-NM-xEO" id="eA8-4R-yTx"/>
                         <outlet property="clockOutLabel" destination="0Gj-mE-kq9" id="VIj-u3-QGp"/>
                         <outlet property="managerNameLabel" destination="Jvm-fB-e4Y" id="lpF-Lg-nZX"/>
                         <outlet property="managerNumberLabel" destination="9Eu-29-a6f" id="YRv-CI-FgP"/>

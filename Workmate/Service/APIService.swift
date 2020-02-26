@@ -28,6 +28,11 @@ class APIService {
         self.baseURL = URL(string: Constants.serviceBaseURL)
     }
         
+    
+    /// Fetch the data from the server
+    /// - Parameters:
+    ///   - request: url request object
+    ///   - completion: will return with the response and error if any
     private func fetchResources<T:Decodable>(request: URLRequest, completion: @escaping (Result<T, APIServiceError>) -> ()) {
         
         urlSession.dataTask(with: request) { (data, response, error) in
@@ -46,6 +51,11 @@ class APIService {
     }
     
     
+    /// Login aPI cal
+    /// - Parameters:
+    ///   - username: username value
+    ///   - password: password value
+    ///   - result: reurns the Login model on success
     func login(username: String = "+6281313272005", password: String = "alexander", result: @escaping (Result<Login, APIServiceError>) -> ()) {
         guard let loginUrl = baseURL?.appendingPathComponent(Constants.ServiceEndPoint.login.rawValue) else {
             result(.failure(.invalidEndpoint))
@@ -68,6 +78,8 @@ class APIService {
         }
     }
     
+    /// Get the job detals
+    /// - Parameter result: returns the job model object on success
     func getJobInfo(result: @escaping (Result<Job, APIServiceError>) -> ()) {
         guard let jobUrl = baseURL?.appendingPathComponent(Constants.ServiceEndPoint.job.rawValue) else {
             result(.failure(.invalidEndpoint))
@@ -81,6 +93,11 @@ class APIService {
         fetchResources(request: request, completion: result)
     }
     
+    /// Clock in time service
+    /// - Parameters:
+    ///   - latitude: Lattitude, Setting defsult values
+    ///   - longitude: longitude , we set as default value
+    ///   - result: returns the clock in time object
     func clockInTimesheet(latitude: String = "-6.2446691", longitude: String = "106.8779625", result: @escaping (Result<ClockInTimeSheet, APIServiceError>) -> ()) {
         guard let clockInUrl = baseURL?.appendingPathComponent(Constants.ServiceEndPoint.clockIn.rawValue) else {
             result(.failure(.invalidEndpoint))
@@ -104,6 +121,11 @@ class APIService {
         }
     }
     
+    /// clock out time service
+    /// - Parameters:
+    ///   - latitude: Lattitude, Setting defsult values
+    ///   - longitude: longitude , we set as default value
+    ///   - result: returns the clock out time object
     func clockOutTimesheet(latitude: String = "-6.2446691", longitude: String = "106.8779625", result: @escaping (Result<ClockOutTimeSheet, APIServiceError>) -> ()) {
         guard let clockOutUrl = baseURL?.appendingPathComponent(Constants.ServiceEndPoint.clockOut.rawValue) else {
             result(.failure(.invalidEndpoint))
@@ -127,6 +149,8 @@ class APIService {
         }
     }
     
+    /// Set apikey to the property
+    /// - Parameter key: apikey
     func setApiKey(with key: String) {
         self.apiKey = key
     }

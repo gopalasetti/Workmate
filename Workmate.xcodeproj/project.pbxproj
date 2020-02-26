@@ -113,10 +113,10 @@
 		EE541AFD2404F7D300251A10 /* Workmate */ = {
 			isa = PBXGroup;
 			children = (
-				EE7B17DA2405400700F6FE48 /* Service */,
 				EEF0BEDE2405041A000662F7 /* Model */,
 				EEF0BEDF24050428000662F7 /* View */,
 				EEF0BEE024050430000662F7 /* ViewModel */,
+				EE7B17DA2405400700F6FE48 /* Service */,
 				EEF0BEE124050449000662F7 /* Resources */,
 				EE541B0C2404F7D400251A10 /* Info.plist */,
 			);

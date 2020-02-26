@@ -36,6 +36,8 @@ class TimesheetViewModel: ObservableObject {
     
     init() {}
     
+    /// Get clock in info
+    /// - Parameter completion: Returns the ClockinTimeSheet
     func getClockInInfo(completion: @escaping Handler<ClockInTimeSheet>) {
         APIService.shared.clockInTimesheet { [weak self] (result) in
             guard let self = self else {return}
@@ -49,6 +51,8 @@ class TimesheetViewModel: ObservableObject {
         }
     }
     
+    /// Get clock out info
+    /// - Parameter completion: Return eith ClockOutTimeSheet Object
     func getClockOutInfo(completion: @escaping Handler<ClockOutTimeSheet>) {
         APIService.shared.clockOutTimesheet { [weak self] (result) in
             guard let self = self else {return}
@@ -61,13 +65,15 @@ class TimesheetViewModel: ObservableObject {
             }
         }
     }
-
+    
+    /// Get date fromat in hours and minits from dte string
+    /// - Parameter serverDateString: returns the date string (h:mm a) format
     func getDate(serverDateString: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ"
         let date = dateFormatter.date(from: serverDateString)!
-        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.dateFormat = "hh:mma"
         let dateString = dateFormatter.string(from: date)
-        return dateString
+        return dateString.lowercased()
     }
 }
